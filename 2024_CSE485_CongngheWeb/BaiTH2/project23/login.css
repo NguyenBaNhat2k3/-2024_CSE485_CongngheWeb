@@ -1,0 +1,18 @@
+html,body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+form{
+    border: 1px black solid;
+    background-color: darkgrey;
+    border-radius: 10px;
+    padding: 100px;
+    max-height: 200px;
+}
+input{
+    margin-bottom: 10px;
+}
+button{
+    padding: 10px 20px;
+}

@@ -1,0 +1,36 @@
+body, html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%;
+    margin:0;
+    gap: 20px;
+    padding: 60px;
+
+}
+
+.product-List {
+    display: flex;
+    flex-wrap: wrap; /* Đảm bảo các mục con có thể xuống dòng nếu không đủ chỗ */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    gap: 20px; /* Khoảng cách giữa các mục */
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 12px;
+    border: black solid 1px;
+}
+
+.pagination a {
+    padding: 12px;
+    border: #1a1a1a solid 1px;
+}
+
+.pagination span {
+    padding: 12px;
+    border: #1a1a1a solid 1px;
+}
