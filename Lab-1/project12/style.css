@@ -1,0 +1,24 @@
+.navigation_bar
+{
+    display: flex;
+    border: 1px solid black;
+    text-align: center;
+    background-color: blue;
+    justify-content: center;
+}
+.item
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 14px;
+    display: flex;
+    padding: 5px;
+    padding-left: 15px;
+    border-left: 1px solid white;
+
+
+}
