@@ -19,7 +19,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                            <a class="nav-link active" aria-current="page" href="/public/index.php?controller=home">Trang chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">News</a>

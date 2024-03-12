@@ -20,13 +20,13 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                            <a class="nav-link active" aria-current="page" href="<?= BASE_URL.'/public/index.php?controller=home'?>">Trang chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="#">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#">Quản lý nhân viên</a>
+                            <a class="nav-link " href="<?= BASE_URL.'/public/index.php?controller=department'?>">Quản lý nhân viên</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Liên hệ</a>
