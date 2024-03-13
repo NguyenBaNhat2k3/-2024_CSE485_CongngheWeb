@@ -20,7 +20,7 @@ $user_web = $depertments[$user_id-1]->getWebsite();
             <div class="col-md">
                 <h3 class="text-center text-primary my-2">Thông tin phòng ban</h3>
                 
-                    <form action="update_process.php" method="post" enctype="multipart/form-data">
+                    <form action="update_process.php?user=<?= $user_id ?>" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="username" class="form-label">Tên phòng</label>
                             <input type="text" class="form-control" id="username" name = "username" placeholder="<?= $user_name ;?>">

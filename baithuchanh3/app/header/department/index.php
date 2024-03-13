@@ -11,7 +11,7 @@
 </head>
 <body>
     <head>
-        <nav class="navbar navbar-expand-lg  custom-navbar">
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
             <div class="container-fluid">
                 <a class="navbar-brand " href="#">Danh bạ điện thoại</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
                             <a class="nav-link active" aria-current="page" href="<?= BASE_URL.'/public/index.php?controller=home'?>">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#">News</a>
+                            <a class="nav-link " href="#">Tin tức</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="<?= BASE_URL.'/public/index.php?controller=department'?>">Quản lý nhân viên</a>

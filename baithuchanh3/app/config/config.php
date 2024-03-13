@@ -8,7 +8,7 @@ define('DB_PASSWORD', '');
 define('DB_DATABASE', 'danhbadienthoai');
 
 //URL website 
-define('BASE_URL', 'http://localhost:3000');
+define('BASE_URL', 'http://localhost/-2024_CSE485_CongngheWeb/baithuchanh3');
 define('DOMAIN', 'http://localhost/BAITHUCHANH3');
 //Hằng số
 define('DEFAULT_CONTROLLER', 'home');

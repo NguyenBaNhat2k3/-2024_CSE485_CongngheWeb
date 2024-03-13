@@ -44,10 +44,14 @@ class DepartmentService {
         return false;
     }
 
-    function updateDepartment($name, $address, $email, $phone, $logo, $web, $parent_id) {
+    function updateDepartment($id,$name, $address, $email, $phone, $logo, $web) {
         $conn = DBconnection();
-        $sql_update = "update departments set ";
-
+        $sql_update = "update departments set department_Name = '$name', address = '$address', email = '$email', phone = '$phone', logo = '$logo', website = '$web' where department_ID = '$id'";
+        $result = queryDB($conn, $sql_update);
+        if($result > 0) {
+            return true;
+        }
+        return false;
     }
 }
 

@@ -15,9 +15,9 @@
     <ul>
 
         <?php
-
-        require_once APP_ROOT.'/baithuchanh3/app/models/Employee.php';
-        require_once '-2024_CSE485_CongngheWeb/baithuchanh3/app/controllers/EmployeeController.php';
+        require_once '../../config/config.php';
+        require_once APP_ROOT.'/app/models/Employee.php';
+        require_once APP_ROOT.'/app/controllers/EmployeeController.php';
         $data = [];
         $model = new Employee($data);
         $controller = new EmployeeController($model);
