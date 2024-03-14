@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 
 class Employee {
@@ -7,19 +5,19 @@ class Employee {
     private $full_name;
     private $address;
     private $mobile_phone;
-    private $positon;
+    private $position;
     private $avatar;
     private $department_ID;
-    private $db;
 
-    public function __construct($employee_ID, $full_name, $address, $mobile_phone, $positon, $avatar, $department_ID) {
-        $this->$employee_ID = $employee_ID;
+    public function __construct($employee_ID, $full_name, $address, $mobile_phone, $position, $avatar, $department_ID)
+    {
+        $this->employee_ID = $employee_ID;
         $this->full_name = $full_name;
         $this->address = $address;
         $this->mobile_phone = $mobile_phone;
-        $this->positon = $positon;
+        $this->position = $position;
         $this->avatar = $avatar;
-        $this->department_ID= $department_ID;
+        $this->department_ID = $department_ID;
     }
 
     public function getEmployeeID() {
@@ -47,10 +45,10 @@ class Employee {
         $this->mobile_phone = $mobile_phone;
     }
     public function getPosition() {
-        return $this->positon;
+        return $this->position;
     }
-    public function setPosition($positon) {
-        $this->positon = $positon;
+    public function setPosition($position) {
+        $this->position = $position;
     }
     public function getAvatar() {
         return $this->avatar;
@@ -64,47 +62,10 @@ class Employee {
     public function setDepartmentID($department_ID) {
         $this->department_ID = $department_ID;
     }
-    public function getAllEmployeeInfo() {
-        $conn = DBconnection();
-        $sql = "SELECT * FROM employees";
-        $result = mysqli_query($conn, $sql);
-        $data = [];
-        if(mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
-                $data[] = $row;
-            }
-        }
-        return $data;
-    }
-    public function getEmPloyeeIfo()
-    {
-        //ket noi co so du lieu
-        $conn = DBconnection();
-        //cau truy van
-        $sql = "SELECT * FROM employees";
-        //thuc thi cau truy van
-        $result = mysqli_query($conn, $sql);
-        //bien chua du lieu tra ve
-        $data = [];
-        //kiem tra xem co du lieu tra ve hay khong
-        if(mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
-                $data[] = $row;
-            }
-        }
-        return $data;
 
-    }
-    public function updateEmployee($employee_ID, $full_name, $address, $mobile_phone, $positon, $avatar, $department_ID)
-    {
-        $conn = DBconnection();
-        $sql = "UPDATE employees SET full_name = '$full_name', address = '$address', mobile_phone = '$mobile_phone', positon = '$positon', avatar = '$avatar', department_ID = '$department_ID' WHERE employee_ID = '$employee_ID'";
-        $result = mysqli_query($conn, $sql);
-        return $result;
-    }
 
 
 }
 
 ?>
->>>>>>> eed48c0e32491c5b526c39f8e2c0e472fa63dd12
+

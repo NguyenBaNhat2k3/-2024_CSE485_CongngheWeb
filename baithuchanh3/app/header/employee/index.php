@@ -25,6 +25,12 @@
                             <a class="nav-link" href="#">Tin tức</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="../../views/employees/view_profile.php">Danh bạ điện tử</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../views/employees/updateEmployee.php">Thông tin cá nhân</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Liên hệ</a>
                         </li>
                     </ul>
