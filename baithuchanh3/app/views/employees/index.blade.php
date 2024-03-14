@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+=======
+<?php
+require_once '../../config/config.php';
+include APP_ROOT.'/app/header/employee/index.php';
+
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<?php
+
+include APP_ROOT.'/app/footer/index.php';
+
+?>
+>>>>>>> 038bb88f776202eebb64c3e3e1c4d342cfc364bb
