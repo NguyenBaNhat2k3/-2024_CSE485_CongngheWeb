@@ -49,6 +49,8 @@ class DepartmentService {
         $sql_update = "update departments set ";
 
     }
+
+  
 }
 
 

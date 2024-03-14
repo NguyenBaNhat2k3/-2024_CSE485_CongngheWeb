@@ -9,5 +9,7 @@ class UserService {
         $sql_selectDepartment = "select parent_Department_ID from departments";
         $result = queryDB($conn, $sql_selectDepartment);
     }
+
+    
 }
 ?>

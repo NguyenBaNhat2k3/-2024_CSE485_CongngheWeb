@@ -1,9 +1,9 @@
 
 
 <?php
-    include '../../config/config.php';
-    require_once APP_ROOT.'../app/header/employee/index.php';
-    require_once APP_ROOT.'../app/service/Departments/DepartmentsService.php';
+    include '../config/config.php';
+    require_once APP_ROOT.'/app/header/user/index.php';
+    require_once APP_ROOT.'/app/service/Departments/DepartmentsService.php';
     $view = new DepartmentService();
     $homes = $view -> getALLDepartment();
 
@@ -25,7 +25,7 @@
 </head>
 <body>
     
-    <img style="width : 100%" src="../../../public/assets/images/banner.jpg" alt="banner">
+    <img style="width : 100%" src="../../public/assets/images/banner.jpg" alt="banner">
     <main>
     <div class="container">
         <div class="row d-flex">
