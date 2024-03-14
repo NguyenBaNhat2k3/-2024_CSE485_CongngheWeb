@@ -1,3 +1,5 @@
+#dataname = DANHBADIENTHOAI
+
 CREATE TABLE departments (
 	department_ID INTEGER  NOT NULL AUTO_INCREMENT,
 	department_Name VARCHAR(255) NOT NULL ,
@@ -34,16 +36,16 @@ CREATE TABLE users (
 )
 
 #INSERT TABLE DEPARTMENT
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (1, 'Parsifal', 'PO Box 2088', 'praddish0@princeton.edu', 'NA', 'CDL', 'uk.co.amazon.Y-find', 1);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (2, 'Jerrilee', 'PO Box 82267', 'jhenzer1@epa.gov', 'NA', 'LIC', 'com.github.Zoolab', 2);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (3, 'Isador', '14th Floor', 'idahlman2@furl.net', 'OC', 'WWI', 'la.51.Bigtax', 3);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (4, 'Antons', '16th Floor', 'aheeley3@earthlink.net', 'OC', 'BNY', 'com.nba.Domainer', 4);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (5, 'Kris', 'PO Box 80573', 'kyeardsley4@infoseek.co.jp', 'EU', 'LIL', 'uk.ac.cam.Fintone', 5);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (6, 'Peter', 'Room 881', 'pcollington5@ovh.net', 'AS', 'YLV', 'uk.gov.Otcom', 6);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (7, 'Glennie', 'Room 1560', 'ghalworth6@mlb.com', 'AS', 'RAQ', 'com.scientificamerican.Y-find', 7);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (8, 'Cecilio', 'Room 117', 'cstitch7@prweb.com', 'NA', 'VDZ', 'com.apple.Asoka', 8);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (9, 'Lynn', 'PO Box 72955', 'lobradden8@instagram.com', 'AS', 'TTH', 'gov.noaa.Solarbreeze', 9);
-insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (10, 'Mauricio', '10th Floor', 'msprowell9@buzzfeed.com', 'AF', 'TKQ', 'com.bluehost.Bitwolf', 10);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (1, 'Parsifal', 'PO Box 2088', 'praddish0@princeton.edu', '11111', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'uk.co.amazon.Y-find', 1);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (2, 'Jerrilee', 'PO Box 82267', 'jhenzer1@epa.gov', '22222', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'com.github.Zoolab', 2);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (3, 'Isador', '14th Floor', 'idahlman2@furl.net', '33333', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'la.51.Bigtax', 3);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (4, 'Antons', '16th Floor', 'aheeley3@earthlink.net', '55555', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'com.nba.Domainer', 4);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (5, 'Kris', 'PO Box 80573', 'kyeardsley4@infoseek.co.jp', '444444', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'uk.ac.cam.Fintone', 5);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (6, 'Peter', 'Room 881', 'pcollington5@ovh.net', '666666', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'uk.gov.Otcom', 6);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (7, 'Glennie', 'Room 1560', 'ghalworth6@mlb.com', '777777', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'com.scientificamerican.Y-find', 7);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (8, 'Cecilio', 'Room 117', 'cstitch7@prweb.com', '888888', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'com.apple.Asoka', 8);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (9, 'Lynn', 'PO Box 72955', 'lobradden8@instagram.com', '999999', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'gov.noaa.Solarbreeze', 9);
+insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (10, 'Mauricio', '10th Floor', 'msprowell9@buzzfeed.com', '1233245', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'com.bluehost.Bitwolf', 10);
 
 #INSERT TABLE EMPLOYEES
 INSERT INTO employees (employee_ID, full_name, address, mobile_phone, posi_tion, avatar, department_ID) VALUES 

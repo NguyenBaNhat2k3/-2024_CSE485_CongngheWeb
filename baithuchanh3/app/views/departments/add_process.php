@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $address = $_POST['address'];
 
     if($departmentservice->addDepartment($name, $address, $email, $phone, $web) == true) {
-        header('Location: /public/index.php');
+        header('Location: '.BASE_URL.'/public/index.php?controller=department');
     }
     else 
         header("location: ./add.php");

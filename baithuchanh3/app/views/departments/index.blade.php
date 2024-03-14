@@ -6,12 +6,13 @@ include APP_ROOT.'/app/header/department/index.php';
 <main>
     <div class="container ">
         <h3 class = "text-center text-success my-3">Quản lý danh bạ</h3>
+        
         <?php if(isset($_GET['delmsg'])): ?>
             <div class="alert alert-success" role = "alert">
                 <?= $_GET['delmsg'] ?>
             </div>
         <?php endif; ?>
-        <a href="/app/views/departments/add.php"  class="btn btn-primary">Thêm mới</a>
+        <a href="<?= BASE_URL.'/app/views/departments/add.php' ?>"  class="btn btn-primary">Thêm mới</a>
         <table class="table">
             <thead>
                 <tr>
@@ -37,13 +38,13 @@ include APP_ROOT.'/app/header/department/index.php';
                         <td><a href="#" class="text-decoration-none" target="_blank"><?= $department->getWebsite() ?></a></td>
                         
                         <td>
-                            <a href="/app/views/departments/update.php?user=<?= $department->getDepartmentID() ?>"><i class="bi bi-pencil-square btn btn-primary"></i></a>
+                            <a href="<?= BASE_URL.'/app/views/departments/update.php?user='.$department->getDepartmentID() ?>"><i class="bi bi-pencil-square btn btn-primary"></i></a>
                         </td>
                         <td>
-                            <a href="/app/views/departments/delete.php?user=<?= $department->getDepartmentID() ?>" class = "btn btn-danger"><i class="bi bi-trash3-fill "></i></a>
+                            <a href="<?= BASE_URL.'/app/views/departments/delete.php?user='.$department->getDepartmentID() ?>" class = "btn btn-danger"><i class="bi bi-trash3-fill " onclick="return confirmDelete();"></i></a>
                         </td>
                         <td>
-                            <a href="/app/views/employees/index.blade.php?user=<?= $department->getDepartmentID() ?>" class = "btn btn-success"><i class="bi bi-file-plus-fill"></i></a>
+                            <a href="<?= BASE_URL.'/app/views/employees/index.blade.php?user='.$department->getDepartmentID() ?>" class = "btn btn-success"><i class="bi bi-file-plus-fill"></i></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -56,3 +57,8 @@ include APP_ROOT.'/app/header/department/index.php';
 <?php
 include APP_ROOT.'/app/footer/index.php';
 ?>
+<script>
+function confirmDelete() {
+  return confirm("Bạn có muốn xóa không?");
+}
+</script>

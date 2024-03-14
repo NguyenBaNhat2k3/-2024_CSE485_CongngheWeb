@@ -6,7 +6,6 @@
     $view = new DepartmentService();
     $homes = $view -> getALLDepartment();
 
-
     $itemsPerPage = 3;
     $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
     $totalPages = ceil(count($homes) / $itemsPerPage);
@@ -23,30 +22,60 @@
     <title>Hệ thống tra cứu danh bạ điện tử TLU</title>
 </head>
 <body>
-    
-    <img style="width : 100%" src="../../public/assets/images/banner.jpg" alt="banner">
+    <img style="width : 100%" src="../public/assets/images/banner.jpg" alt="banner">
     <main>
     <div class="container">
-        <div class="row d-flex">
-            
-            <?php foreach($homes as $home) :?> 
+        <form class="d-flex my-3 justify-content-end col-5" role="search"  >
+            <input class="form-control me-2 " type="search" placeholder="tìm kiếm" aria-label="Search" name = 'timkiem'>
+            <button class="btn btn-outline-success " type="submit" style="width: 150px;">Tìm kiếm</button>
+        </form>
+        <?php  
+            if(isset($_GET['timkiem'])) {
+                $search = $view->searchDepartment($_GET['timkiem']);
+            }
+            else
+                $search = null; 
+        ?>
+        <?php if($search  != null) { ?>
+            <?php foreach($search as $home) :?> 
+
                 <div class="col-4">
                     <div class="card m-3" style="width: 18rem;">
                         <img style="width : 100%; height : 100%" src="<?= $home->getlogo() ?>" class="card-img-top" alt="Ảnh khoa"> 
                         <div class="card-body">
-                            <p class="card-text"><?= $home->getAddress() ?></p>
-                            <p class="card-text"><?= $home->getEmail() ?></p>
-                            <p class="card-text"><?= $home->getPhone() ?></p>
-                            <p class="card-text"><?= $home->getWebsite() ?></p>
+                            <p class="card-text">Địa chỉ: <?= $home->getAddress() ?></p>
+                            <p class="card-text">Email: <?= $home->getEmail() ?></p>
+                            <p class="card-text">SĐT: <?= $home->getPhone() ?></p>
+                            <p class="card-text">Website: <?= $home->getWebsite() ?></p>
                             <h5 class="card-title">
                                 <a href="" class="text-decoration-none"><?= $home->getDepartmentName() ?></a>
                             </h5>
                         </div>
                     </div>
-                </div>
+                </div>  
             <?php endforeach; ?>
-        </div>
+        <?php } else {?>
+            <div class="row d-flex">         
+                <?php foreach($homes as $home) :?> 
 
+                        <div class="col-4">
+                            <div class="card m-3" style="width: 18rem;">
+                                <img style="width : 100%; height : 100%" src="<?= $home->getlogo() ?>" class="card-img-top" alt="Ảnh khoa"> 
+                                <div class="card-body">
+                                    <p class="card-text">Địa chỉ: <?= $home->getAddress() ?></p>
+                                    <p class="card-text">Email: <?= $home->getEmail() ?></p>
+                                    <p class="card-text">SĐT: <?= $home->getPhone() ?></p>
+                                    <p class="card-text">Website: <?= $home->getWebsite() ?></p>
+                                    <h5 class="card-title">
+                                        <a href="" class="text-decoration-none"><?= $home->getDepartmentName() ?></a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>  
+
+                <?php endforeach; ?>
+            </div>
+        <?php } ?>
         <div class="row">
             <nav aria-label="...">
                 <ul class="pagination">
@@ -83,4 +112,5 @@
 
 <?php 
 require_once APP_ROOT.'/app/footer/index.php';
+
 ?>

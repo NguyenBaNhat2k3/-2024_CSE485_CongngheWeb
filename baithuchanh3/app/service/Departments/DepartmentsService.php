@@ -7,7 +7,7 @@ class DepartmentService {
     function getALLDepartment() {
         $conn = DBconnection();
 
-        $sql_select = "select * from departments order by parent_Department_ID ASC";
+        $sql_select = "select * from departments order by department_ID ASC";
 
         $resule = queryDB($conn,$sql_select);
         $departments = [];
@@ -21,14 +21,14 @@ class DepartmentService {
 
     }
 
-    function addDepartment($name, $email, $phone, $web, $parent_id) {
+    function addDepartment($name, $address, $email, $phone, $web) {
         $conn = DBconnection();
         $sql_check = "select * from departments where email = '{$email}'";
         $check = queryDB($conn, $sql_check);      
         if(mysqli_num_rows($check) > 0)
             return false;
         else {
-            $sql_insert = "insert into departments (department_Name, email, phone, website, parent_Department_ID) values ('$name', '$email', '$phone','$web','$parent_id');";
+            $sql_insert = "insert into departments (department_Name, address,email, phone, website) values ('$name', '$address','$email', '$phone','$web');";
             $result = mysqli_query($conn, $sql_insert);
             if($result > 0)
                 return true;
@@ -52,6 +52,19 @@ class DepartmentService {
             return true;
         }
         return false;
+    }
+    function searchDepartment($name) {
+        $conn = DBconnection();
+        $sql_search = "select * from departments where department_Name = '$name'";
+        $result = mysqli_query($conn, $sql_search);
+        $departments = [];
+        if(mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $department = new Department($row['department_ID'],$row['department_Name'],$row['address'],$row['email'],$row['phone'],$row['logo'],$row['website'],$row['parent_Department_ID']);
+                $departments[] = $department;
+            }      
+        }
+        return $departments;
     }
 }
 

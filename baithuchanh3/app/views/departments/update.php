@@ -23,27 +23,27 @@ $user_web = $depertments[$user_id-1]->getWebsite();
                     <form action="update_process.php?user=<?= $user_id ?>" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="username" class="form-label">Tên phòng</label>
-                            <input type="text" class="form-control" id="username" name = "username" placeholder="<?= $user_name ;?>">
+                            <input type="text" class="form-control" id="username" name = "username" value="<?= $user_name ;?>">
                         </div>
                         <div class="mb-3">
                             <label for="useremail" class="form-label">Email</label>
-                            <input class="form-control" type="email" name = "useremail" id="useremail" placeholder="<?= $user_email; ?>" rows="3"></input>
+                            <input class="form-control" type="email" name = "useremail" id="useremail" value="<?= $user_email; ?>" rows="3"></input>
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Số điện thoại</label>
-                            <input type="number" class="form-control" name="phone" placeholder="<?= $user_phone; ?>" >
+                            <input type="number" class="form-control" name="phone" value="<?= $user_phone; ?>" >
                         </div>
                         <div class="mb-3">
                             <label for="address" class="form-label">Địa chỉ</label>
-                            <input class="form-control" type="text" name="address" rows="3" placeholder = "<?= $user_address ?>"></input>
+                            <input class="form-control" type="text" name="address" rows="3" value = "<?= $user_address ?>"></input>
                         </div>
                         <div class="mb-3">
                             <label for="logo" class="form-label">Logo</label>
-                            <input class="form-control" type="text" name="logo" rows="3" placeholder="<?= $user_logo ?>" ></input>
+                            <input class="form-control" type="text" name="logo" rows="3" value="<?= $user_logo ?>" ></input>
                         </div>
                         <div class="mb-3">
                             <label for="website" class="form-label">Website</label>
-                            <input class="form-control" type="text" name="website" rows="3" placeholder="<?= $user_web ?>" ></input>
+                            <input class="form-control" type="text" name="website" rows="3" value="<?= $user_web ?>" ></input>
                         </div>
                         <button type="submit" class=" btn btn-primary">OK</button>
                     </form>

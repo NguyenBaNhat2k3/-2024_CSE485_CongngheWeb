@@ -4,22 +4,21 @@
     <div class="row">
       <div class="col-md-6">
         <h3>Thông tin liên hệ</h3>
-        <p>123 Đường ABC, Thành phố XYZ</p>
-        <p>Email: info@example.com</p>
+        <p>175 Tây Sơn, Đống Đa, Thanh Xuân, Hà Nội</p>
+        <p>Email: tlu@edu.vn</p>
         <p>Điện thoại: 123-456-7890</p>
       </div>
       <div class="col-md-6">
         <h3>Liên kết</h3>
         <ul class="list-unstyled">
           <li><a href="#">Trang chủ</a></li>
-          <li><a href="#">Giới thiệu</a></li>
-          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Tin tức</a></li>
           <li><a href="#">Liên hệ</a></li>
         </ul>
       </div>
     </div>
     <hr>
-    <p class="text-center">© 2024 Tên Công ty. Tất cả các quyền được bảo lưu.</p>
+    <p class="text-center">© 2024 Công ty bằng trung bình. Tất cả các quyền được bảo lưu.</p>
   </div>
 </footer>
 
