@@ -1,5 +1,5 @@
 <?php
-require_once '../../config/config.php';
+// require_once '../../config/config.php';
 require_once APP_ROOT . '/app/config/datebase.php';
 require_once APP_ROOT . '/app/models/Employee.php';
 class EmployeeService
@@ -24,9 +24,9 @@ class EmployeeService
    }
 
     //viet ham updateEmployee
-    public function updateEmployee($employee_ID, $full_name, $address, $mobile_phone, $position, $avatar, $department_ID) {
+    public function updateEmployees($employee_ID, $full_name, $address, $mobile_phone, $position, $avatar, $department_ID) {
         $conn = DBconnection();
-        echo "phu bu";
+        // echo "phu bu";
         $sql_update = "update employees set full_name = '$full_name', address = '$address', mobile_phone = '$mobile_phone', posi_tion = '$position', avatar = '$avatar', department_ID = '$department_ID' where employee_ID = '$employee_ID'";
         $result = mysqli_query($conn, $sql_update);
         if($result > 0)

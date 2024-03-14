@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <?php
 require_once '../../config/config.php';
 include APP_ROOT.'/app/header/employee/index.php';
@@ -23,4 +22,4 @@ include APP_ROOT.'/app/header/employee/index.php';
 include APP_ROOT.'/app/footer/index.php';
 
 ?>
->>>>>>> 038bb88f776202eebb64c3e3e1c4d342cfc364bb
+

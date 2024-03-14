@@ -4,7 +4,7 @@ require_once APP_ROOT . '/app/service/employees/EmployeeService.php';
 require_once APP_ROOT . '/app/models/Employee.php';
 include APP_ROOT.'/app/header/employee/index.php';
 $employeeService = new EmployeeService();
-//$employee = $employeeService->getEmployeeById($_GET['id']);
+$employee = $employeeService->getEmployeeById($_GET['id']);
 
 ?>
 <!DOCTYPE html>
@@ -18,36 +18,36 @@ $employeeService = new EmployeeService();
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-6">
-            <h2 class="text-primary text-center">Sửa thông tin cá nhân </h2>
+            <h2 class="text-primary text-center my-3">Sửa thông tin cá nhân </h2>
             <form method="post" action="processupdateEmployee.php">
                 <div class="mb-3">
                     <label for="address" class="form-label">ID</label>
-                    <input type="text" class="form-control" name="id" ">
+                    <input type="text" class="form-control" name="id" value="<?= $employee->getEmployeeID() ?> "readonly>
                 </div>
                 <div class="mb-3">
                     <label for="fullname" class="form-label">Họ và Tên</label>
-                    <input type="text" class="form-control" name="fullname" id ="fullname" >
+                    <input type="text" class="form-control" name="fullname" id ="fullname" value="<?= $employee->getFullName() ?>">
 
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Địa chỉ</label>
-                    <input type="text" class="form-control" name="address" >
+                    <input type="text" class="form-control" name="address" value="<?= $employee->getAddress() ?>">
                 </div>
                 <div class="mb-3">
                     <label for="mobliephone" class="form-label">Số điện thoại</label>
-                    <input type="text" class="form-control" name="mobilephone" >
+                    <input type="text" class="form-control" name="mobilephone" value="<?= $employee->getMobilePhone() ?>">
                 </div>
                 <div class="mb-3">
                     <label for="position" class="form-label">Vị trí</label>
-                    <input type="text" class="form-control" name="position" >
+                    <input type="text" class="form-control" name="position" value="<?= $employee->getPosition() ?>">
                 </div>
                 <div class="mb-3">
                     <label for="avatar" class="form-label">Ảnh đại diện</label>
-                    <input type="text" class="form-control" name="avatar">
+                    <input type="text" class="form-control" name="avatar" value="<?= $employee->getAvatar() ?>">
                 </div>
                 <div class="mb-3">
                     <label for="departmentid" class="form-label">Đơn vị công tác</label>
-                    <input type="text" class="form-control" name="departmentid" >
+                    <input type="text" class="form-control" name="departmentid" value="<?= $employee->getDepartmentID() ?>">
                 </div>
                 <button href="" type="submit" class="btn btn-outline-primary">Submit</button>
             </form>

@@ -1,7 +1,5 @@
 
-
 <?php
-    include '../config/config.php';
     require_once APP_ROOT.'/app/header/user/index.php';
     require_once APP_ROOT.'/app/service/Departments/DepartmentsService.php';
     $view = new DepartmentService();

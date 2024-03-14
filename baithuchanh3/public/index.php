@@ -18,7 +18,8 @@ else if($controller == 'department') {
 }
 else if($controller == 'employee') {
     require_once APP_ROOT.'/app/controllers/EmployeeController.php';
-    
+    $home = new EmployeeController();
+    $home->index();
 }
 else {
     echo 'URL khong ton tai';

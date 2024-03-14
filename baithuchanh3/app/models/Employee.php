@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <?php
 
 class Employee {
@@ -71,4 +70,4 @@ class Employee {
 
 ?>
 
->>>>>>> 038bb88f776202eebb64c3e3e1c4d342cfc364bb
+
