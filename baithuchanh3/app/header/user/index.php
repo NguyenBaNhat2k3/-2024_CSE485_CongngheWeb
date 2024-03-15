@@ -1,3 +1,11 @@
+<?php 
+session_start(); 
+include APP_ROOT.'/app/service/users/UserService.php';
+
+$userSer = new UserService();
+$userAdmins = $userSer->getALLAdmin();
+$userRegulars = $userSer->getAllRegular();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,19 +25,42 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/public/index.php?controller=home">Trang chủ</a>
+                        <a class="nav-link active" aria-current="page" href="<?= BASE_URL.'/public/index.php?controller=home'?>">Trang chủ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Tin tức</a>
                     </li>
+                    <?php if(isset($_SESSION['isLogin']) && ($_SESSION['isLogin'] != "admin")) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link " href="<?= BASE_URL.'/public/index.php?controller=department'?>">Quản lý phòng ban</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= BASE_URL.'/public/index.php?controller=employee' ?>">Thông tin nhân viên</a>
+                        </li>
+                    <?php } else if(isset($_SESSION['isLogin']) && ($_SESSION['isLogin'] == "admin")) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../views/employees/updateEmployee.php">Thông tin cá nhân</a>
+                        </li>
+                    <?php } ?>    
                     <li class="nav-item">
                         <a class="nav-link" href="#">Liên hệ</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Đăng nhập</a>
-                    </li>
+                    <?php if(isset($_SESSION['isLogin']) && ($_SESSION['isLogin'] != "")) { ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="<?= BASE_URL.'/app/views/employees/index.blade.php?user='.$_SESSION['isLogin'] ?>"  >
+                                <i class="bi bi-gear"></i>
+                                <?= $_SESSION['isLogin']; ?>
+                                <li><a class="nav-link" href="<?= BASE_URL.'/app/views/login/logout.php' ?>">Đăng xuất</a></li>
+                                <li><a class="nav-link" href="#">Đổi mật khẩu</a></li>
+                            </a>
+                        </li>                         
+                    <?php } else {?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= BASE_URL.'/public/index.php?controller=login'; ?>">Đăng nhập</a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>

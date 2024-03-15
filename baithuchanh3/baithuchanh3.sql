@@ -48,8 +48,8 @@ insert into departments (department_ID, department_Name, address, email, phone, 
 insert into departments (department_ID, department_Name, address, email, phone, logo, website, parent_Department_ID) values (10, 'Mauricio', '10th Floor', 'msprowell9@buzzfeed.com', '1233245', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', 'com.bluehost.Bitwolf', 10);
 
 #INSERT TABLE EMPLOYEES
-INSERT INTO employees (employee_ID, full_name, address, mobile_phone, posi_tion, avatar, department_ID) VALUES 
-	(1, 'John Doe', '123 Main St', '123456789', 'Manager', 'avatar.jpg', 1);
+INSERT INTO employees ( employee_ID, full_name, address, mobile_phone, posi_tion, avatar, department_ID) VALUES 
+	(11, 'John Doe2', '123 Main St', '123456789', 'Manager', 'avatar.jpg', 5);
 INSERT INTO employees (employee_ID, full_name, address, mobile_phone, posi_tion, avatar, department_ID)
 VALUES (2, 'Jane Smith', '456 Elm St', '987654321', 'Assistant', 'avatar.jpg', 1);
 
@@ -109,3 +109,5 @@ VALUES ('user9', 'password9', 'admin', 9);
 INSERT INTO users (user_name, pass_word, ROLE, employee_ID)
 VALUES ('user10', 'password10', 'regular', 10);
 
+
+DELETE FROM employees  WHERE employee_ID = 1,DELETE FROM users WHERE employee_ID = 1

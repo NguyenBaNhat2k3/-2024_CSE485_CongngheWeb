@@ -15,24 +15,28 @@ include APP_ROOT.'/app/header/department/index.php';
                 <?php endif; ?>
                     <form action="add_process.php" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="username" class="form-label">Tên phòng</label>
-                            <input type="text" class="form-control" id="username" name = "username" >
+                            <label for="name" class="form-label">Họ Tên</label>
+                            <input type="text" class="form-control"  name = "name" >
                         </div>
                         <div class="mb-3">
-                            <label for="useremail" class="form-label">Email</label>
-                            <input class="form-control" type="email" name = "useremail" id="useremail" placeholder="name@example.com" rows="3"></input>
+                            <label for="useremail" class="form-label">Chức vụ</label>
+                            <input class="form-control" type="text" name = "position"  rows="3"></input>
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Số điện thoại</label>
-                            <input type="number" class="form-control" name="phone"  >
+                            <input type="text" class="form-control" name="phone"  >
                         </div>
                         <div class="mb-3">
                             <label for="address" class="form-label">Địa chỉ</label>
                             <input class="form-control" type="text" name="address" rows="3"></input>
                         </div>
                         <div class="mb-3">
-                            <label for="website" class="form-label">Website</label>
-                            <input class="form-control" type="text" name="website" rows="3"></input>
+                            <label for="address" class="form-label">Avatar</label>
+                            <input class="form-control" type="text" name="avatar" rows="3" value="https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg"></input>
+                        </div>
+                        <div class="mb-3">
+                            <label for="website" class="form-label">Phòng ban</label>
+                            <input class="form-control" type="text" name="department_id" rows="3"></input>
                         </div>
                         <button type="submit" class=" btn btn-primary">OK</button>
                     </form>

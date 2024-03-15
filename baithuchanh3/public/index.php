@@ -21,6 +21,11 @@ else if($controller == 'employee') {
     $home = new EmployeeController();
     $home->index();
 }
+else if($controller == 'login') {
+    require_once APP_ROOT.'/app/controllers/UserController.php';
+    $home = new UserController();
+    $home -> login();
+}
 else {
     echo 'URL khong ton tai';
 }

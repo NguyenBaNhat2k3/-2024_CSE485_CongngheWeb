@@ -12,6 +12,11 @@ include APP_ROOT.'/app/header/department/index.php';
                 <?= $_GET['delmsg'] ?>
             </div>
         <?php endif; ?>
+        <?php if(isset($_GET['delerr'])): ?>
+            <div class="alert alert-success" role = "alert">
+                <?= $_GET['delerr'] ?>
+            </div>
+        <?php endif; ?>
         <a href="<?= BASE_URL.'/app/views/departments/add.php' ?>"  class="btn btn-primary">Thêm mới</a>
         <table class="table">
             <thead>
@@ -22,6 +27,7 @@ include APP_ROOT.'/app/header/department/index.php';
                 <th scope="col">SĐT</th>
                 <th scope="col">Logo</th>
                 <th scope="col">Website</th>              
+                <th scope="col">Phòng ban</th>              
                 <th scope="col" colspan="2" class="text-center">Thao tác</th>
 
                 </tr>
@@ -36,6 +42,7 @@ include APP_ROOT.'/app/header/department/index.php';
                         <td><?= $department->getPhone() ?></td>
                         <td><img src="<?= $department->getLogo() ?>" class="img-thumbnail" style="max-width: 100px;"></td>
                         <td><a href="#" class="text-decoration-none" target="_blank"><?= $department->getWebsite() ?></a></td>
+                        <td><a href="#" class="text-decoration-none" target="_blank"><?= $department->getParentDepartmentID() ?></a></td>
                         
                         <td>
                             <a href="<?= BASE_URL.'/app/views/departments/update.php?user='.$department->getDepartmentID() ?>"><i class="bi bi-pencil-square btn btn-primary"></i></a>

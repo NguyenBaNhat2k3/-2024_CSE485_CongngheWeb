@@ -22,6 +22,7 @@ class EmployeeService
            echo $e->getMessage();
        }
    }
+ 
 
     //viet ham updateEmployee
     public function updateEmployees($employee_ID, $full_name, $address, $mobile_phone, $position, $avatar, $department_ID) {
@@ -62,6 +63,39 @@ class EmployeeService
         }
     }
 
+
+    function deleteEmployOfUser($id) {
+        $conn = DBconnection();
+        $sql_del_user = "delete from users where employee_ID = {$id}";
+        $result = mysqli_query($conn, $sql_del_user);
+        if($result > 0)
+            return true;
+        return false;
+    }
+
+    function deleteEmployee($id) {
+        $conn = DBconnection();
+        $sql_del_employ = "delete from employees where employee_ID = {$id}";
+        $result = mysqli_query($conn, $sql_del_employ);
+        if($result > 0)
+            return true;
+        return false;
+    }
+
+    function addEmployee($id, $name, $address, $position, $phone, $avatar,$department_id) {
+        $conn = DBconnection();
+        $sql_check = "select * from employees where mobile_phone = '{$phone}'";
+        $check = queryDB($conn, $sql_check);      
+        if(mysqli_num_rows($check) > 0)
+            return false;
+        else {
+            $sql_insert = "insert into employees (employee_ID, full_name, address,posi_tion, mobile_phone, avatar,department_ID) values ('$id','$name', '$address','$position', '$phone', '$avatar','$department_id');";
+            $result = mysqli_query($conn, $sql_insert);
+            if($result > 0)
+                return true;
+        }
+        return false;
+    }
 
 }
 

@@ -1,4 +1,10 @@
-
+<?php
+    include APP_ROOT.'/app/service/users/UserService.php';
+    
+    $userSer = new UserService();
+    $userAdmins = $userSer->getALLAdmin();
+    $userRegulars = $userSer->getAllRegular();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,24 +32,31 @@
                             <a class="nav-link " href="#">Tin tức</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= BASE_URL.'/public/index.php?controller=department'?>">Quản lý nhân viên</a>
+                            <a class="nav-link " href="<?= BASE_URL.'/public/index.php?controller=department'?>">Quản lý phòng ban</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= BASE_URL.'/public/index.php?controller=employee' ?>">Thông tin nhân viên</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Liên hệ</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-gear"></i>
-                                Cài đặt chung
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
-                                <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                        <?php session_start(); if(isset($_SESSION['isLogin']) && ($_SESSION['isLogin'] != "")) { ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="<?= BASE_URL.'/app/views/employees/index.blade.php?user='.$_SESSION['isLogin'] ?>" >
+                                    <i class="bi bi-gear"></i>
+                                    <?= $_SESSION['isLogin']; ?>
+                                    <li><a class="nav-link" href="<?= BASE_URL.'/app/views/login/logout.php' ?>">Đăng xuất</a></li>
+                                    <!-- <li><a class="nav-item" href="#">Đổi mật khẩu</a></li>                                    -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                    
 
-                            </ul>
-                        </li>
+                                </ul>
+                            </li>                         
+                        <?php }?>
+                            
                     </ul>
                 </div>
             </div>
